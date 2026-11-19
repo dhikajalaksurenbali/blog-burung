@@ -1,62 +1,164 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Profil | Dhika Jalak Suren Bali';
+const description = 'Profil UD. Dhika Jalak Suren Bali, informasi alamat, kontak WhatsApp, media sosial, dan lokasi penjual jalak suren di Dalung, Badung, Bali.';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="id">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="profile">
+				<p class="eyebrow">TENTANG KAMI</p>
+				<h1>UD. DHIKA JALAK SUREN BALI</h1>
+				<p class="intro">
+					Selamat datang di website UD. DHIKA JALAK SUREN BALI. Website ini menjadi tempat berbagi postingan foto burung dan informasi singkat. Untuk menanyakan ketersediaan, harga, serta informasi pengiriman, silakan hubungi kami secara langsung melalui WhatsApp.
+				</p>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+				<div class="details">
+					<div class="detail">
+						<strong>Alamat</strong>
+						<span>Jl. I Gusti Ngurah Gentuh No. 28, Dalung, Kecamatan Kuta Utara, Kabupaten Badung, Bali 80351.</span>
+					</div>
+					<div class="detail">
+						<strong>WhatsApp</strong>
+						<span><a href="https://wa.me/6287723457380?text=Halo%20UD.%20Dhika%20Jalak%20Suren%20Bali%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener noreferrer">0877-2345-7380</a></span>
+					</div>
+					<div class="detail">
+						<strong>Facebook</strong>
+						<span><a href="https://www.facebook.com/jalak.suren.bali" target="_blank" rel="noopener noreferrer">facebook.com/jalak.suren.bali</a></span>
+					</div>
+					<div class="detail">
+						<strong>TikTok</strong>
+						<span><a href="https://www.tiktok.com/@dhika.jalak.suren.bali" target="_blank" rel="noopener noreferrer">tiktok.com/@dhika.jalak.suren.bali</a></span>
+					</div>
+					<div class="detail">
+						<strong>Instagram</strong>
+						<span><a href="https://www.instagram.com/ud.dhikajalaksuren/" target="_blank" rel="noopener noreferrer">instagram.com/ud.dhikajalaksuren</a></span>
+					</div>
+					<div class="detail">
+						<strong>Wilayah layanan</strong>
+						<span>Bali dan informasi pengiriman ke luar pulau melalui konfirmasi langsung.</span>
+					</div>
+					<div class="detail">
+						<strong>Informasi stok</strong>
+						<span>Stok dan harga dapat berubah. Silakan konfirmasi sebelum melakukan transaksi.</span>
+					</div>
+				</div>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+				<section class="map-section" aria-labelledby="map-title">
+					<h2 id="map-title">Lokasi DHIKA JS BALI</h2>
+					<p>Jl. I Gusti Ngurah Gentuh No. 28, Dalung, Kecamatan Kuta Utara, Kabupaten Badung, Bali 80351.</p>
+					<div class="map-frame">
+						<iframe
+							title="Peta lokasi DHIKA JS BALI di Dalung, Bali"
+							src="https://www.google.com/maps?q=Jl.%20I%20Gusti%20Ngurah%20Gentuh%20No.%2028%2C%20Dalung%2C%20Kuta%20Utara%2C%20Badung%2C%20Bali%2080351&output=embed"
+							width="100%"
+							height="360"
+							style="border:0"
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+							allowfullscreen>
+						</iframe>
+					</div>
+					<a class="text-link" href="https://maps.app.goo.gl/FwEpp2eYaPWoBoYB6?g_st=ac" target="_blank" rel="noopener noreferrer">Buka petunjuk arah di Google Maps</a>
+				</section>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+				<div class="actions">
+					<a class="contact-link" href="https://wa.me/6287723457380?text=Halo%20UD.%20Dhika%20Jalak%20Suren%20Bali%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener noreferrer">Hubungi via WhatsApp</a>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+<style>
+	main {
+		width: min(100% - 2rem, 900px);
+		margin: 0 auto;
+		padding: 2rem 0 3rem;
+	}
+	.profile {
+		padding: clamp(1.25rem, 4vw, 2.5rem);
+		background: #fff;
+		border-radius: 16px;
+		box-shadow: var(--box-shadow);
+	}
+	.eyebrow {
+		margin: 0 0 .5rem;
+		color: #159957;
+		font-size: .8rem;
+		font-weight: 800;
+		letter-spacing: .12em;
+	}
+	h1 {
+		margin: 0 0 1rem;
+		font-size: clamp(1.7rem, 5vw, 2.4rem);
+		line-height: 1.2;
+	}
+	.intro {
+		margin: 0;
+		line-height: 1.8;
+	}
+	.details {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+	.detail {
+		display: flex;
+		flex-direction: column;
+		gap: .35rem;
+		padding: 1rem;
+		background: #f5f8f6;
+		border-radius: 10px;
+		font-size: .95rem;
+		line-height: 1.6;
+		overflow-wrap: anywhere;
+	}
+	.detail strong { color: #155799; }
+	.detail a, .text-link {
+		color: #087b49;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+	.map-section { margin-top: 2.5rem; }
+	.map-section h2 { margin-bottom: .5rem; }
+	.map-section p { line-height: 1.7; }
+	.map-frame {
+		overflow: hidden;
+		border: 1px solid #dce5df;
+		border-radius: 14px;
+	}
+	.map-frame iframe {
+		display: block;
+		width: 100%;
+		min-height: 300px;
+	}
+	.text-link { display: inline-block; margin-top: .85rem; }
+	.actions { margin-top: 2rem; text-align: center; }
+	.contact-link {
+		display: inline-block;
+		padding: .85rem 1.4rem;
+		border-radius: 999px;
+		background: #159957;
+		color: #fff;
+		font-weight: 700;
+		text-decoration: none;
+	}
+	.contact-link:hover { background: #117b47; }
+	@media (max-width: 600px) {
+		main { width: min(100% - 1rem, 900px); padding: 1rem 0 2rem; }
+		.details { grid-template-columns: 1fr; }
+		.profile { border-radius: 12px; }
+	}
+</style>
