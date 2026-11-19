@@ -52,7 +52,33 @@ import { SITE_TITLE } from '../consts';
 	.social-links { align-items: center; gap: 0.35em; }
 	.social-links a { padding: 0.5em; }
 	.social-links a:hover { color: var(--accent); }
+
 	@media (max-width: 720px) {
-		.social-links { display: none; }
+		nav {
+			flex-direction: column;
+			justify-content: center;
+			gap: 0.15rem;
+			padding: 0.5rem 0 0.35rem;
+		}
+		nav h2 {
+			width: 100%;
+			text-align: center;
+		}
+		.internal-links {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		nav a {
+			padding: 0.7em 0.65em;
+		}
+		.social-links {
+			display: flex;
+			justify-content: center;
+			gap: 0.5em;
+		}
+		.social-links a {
+			padding: 0.35em;
+		}
 	}
 </style>
