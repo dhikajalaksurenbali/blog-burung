@@ -29,6 +29,12 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 }
+button,
+input,
+textarea,
+select {
+	font-family: inherit;
+}
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);
