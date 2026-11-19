@@ -16,6 +16,7 @@ const description = 'Profil UD. Dhika Jalak Suren Bali, informasi alamat, kontak
 		<Header />
 		<main>
 			<section class="profile">
+				<img class="profile-image" src="/dhika-jalak-suren-bali.webp" alt="UD. Dhika Jalak Suren Bali" fetchpriority="high" />
 				<p class="eyebrow">TENTANG KAMI</p>
 				<h1>UD. DHIKA JALAK SUREN BALI</h1>
 				<p class="intro">
@@ -85,6 +86,16 @@ const description = 'Profil UD. Dhika Jalak Suren Bali, informasi alamat, kontak
 		width: min(100% - 2rem, 900px);
 		margin: 0 auto;
 		padding: 2rem 0 3rem;
+	}
+	.profile-image {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 420px;
+		object-fit: cover;
+		object-position: center;
+		margin-bottom: 1.75rem;
+		border-radius: 12px;
 	}
 	.profile {
 		padding: clamp(1.25rem, 4vw, 2.5rem);
