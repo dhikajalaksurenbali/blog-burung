@@ -51,6 +51,55 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+
+			.article-share {
+				margin: 2rem 0 1.5rem;
+				padding-top: 1rem;
+				border-top: 1px solid rgb(var(--gray-light));
+			}
+			.article-info {
+				margin: 1.5rem 0 2rem;
+				padding: 1.25rem;
+				border: 1px solid #d9e4df;
+				border-left: 4px solid #159957;
+				border-radius: 12px;
+				background: #f5faf7;
+				color: #263b31;
+				font-size: 0.96rem;
+				line-height: 1.65;
+			}
+			.article-info h2 {
+				margin: 0 0 0.65rem;
+				color: #155c3b;
+				font-size: 1.15rem;
+			}
+			.article-info p {
+				margin: 0 0 0.85rem;
+			}
+			.article-info p:last-child {
+				margin-bottom: 0;
+			}
+			.article-info a {
+				color: #126b43;
+				font-weight: 700;
+				text-decoration: underline;
+				text-underline-offset: 2px;
+			}
+			.article-info .info-label {
+				display: block;
+				margin-bottom: 0.15rem;
+				color: #52665b;
+				font-size: 0.78rem;
+				font-weight: 800;
+				letter-spacing: 0.045em;
+				text-transform: uppercase;
+			}
+			@media (max-width: 600px) {
+				.article-info {
+					padding: 1rem;
+					font-size: 0.92rem;
+				}
+			}
 		</style>
 	</head>
 
@@ -77,9 +126,42 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<hr />
 					</div>
 					<slot />
+
+					<div class="article-share" aria-label="Bagikan artikel">
+						<div class="sharethis-inline-share-buttons"></div>
+					</div>
+
+					<aside class="article-info" aria-labelledby="article-info-title">
+						<h2 id="article-info-title">Informasi Penting</h2>
+						<p>Stok burung tidak selalu ready setiap saat. Harap perhatikan tanggal postingan untuk estimasi ketersediaan.</p>
+						<p>Untuk memastikan stok real time, harga terkini maupun harga grosir, silakan langsung hubungi admin via WhatsApp <a href="https://wa.me/6287723457380" target="_blank" rel="noopener noreferrer">0877-2345-7380</a>.</p>
+						<p>
+							<span class="info-label">Alamat &amp; Lokasi (Google Maps)</span>
+							<a href="https://maps.app.goo.gl/VNEjK7sAWpUQuBh47" target="_blank" rel="noopener noreferrer">Jl. I Gusti Ngurah Gentuh No. 28, Dalung, Kecamatan Kuta Utara, Kabupaten Badung, Bali 80351.</a>
+						</p>
+						<p>Silakan kunjungi <a href="https://demo.dhikajsbali.com/info/">halaman informasi</a> untuk detail ketentuan pembayaran, pengiriman, maupun informasi lainnya.</p>
+					</aside>
 				</div>
 			</article>
 		</main>
 		<Footer />
+		<script is:inline>
+			function loadShareThisWhenIdle() {
+				var load = function () {
+					if (document.querySelector('script[data-sharethis-loader]')) return;
+					var script = document.createElement('script');
+					script.async = true;
+					script.src = 'https://platform-api.sharethis.com/js/sharethis.js#property=6aff304a4f0675cfbe033e69&product=sop';
+					script.setAttribute('data-sharethis-loader', 'true');
+					(document.head || document.body).appendChild(script);
+				};
+				if ('requestIdleCallback' in window) {
+					window.requestIdleCallback(load, { timeout: 5000 });
+				} else {
+					window.setTimeout(load, 2500);
+				}
+			}
+			window.addEventListener('load', loadShareThisWhenIdle, { once: true });
+		</script>
 	</body>
 </html>
