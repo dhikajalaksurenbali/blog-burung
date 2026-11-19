@@ -44,17 +44,6 @@ const today = new Date();
 			histatsScript.src = 'https://s10.histats.com/js15_as.js';
 			(document.head || document.body).appendChild(histatsScript);
 		});
-
-		if (document.querySelector('.sharethis-inline-share-buttons')) {
-			runWhenIdle(function () {
-				if (document.querySelector('script[src*="platform-api.sharethis.com/js/sharethis.js"]')) return;
-
-				var shareThisScript = document.createElement('script');
-				shareThisScript.async = true;
-				shareThisScript.src = 'https://platform-api.sharethis.com/js/sharethis.js#property=6aff304a4f0675cfbe033e69&product=sop';
-				(document.head || document.body).appendChild(shareThisScript);
-			});
-		}
 	}, { once: true });
 </script>
 
