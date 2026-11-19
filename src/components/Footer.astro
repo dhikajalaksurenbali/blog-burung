@@ -16,29 +16,48 @@ const today = new Date();
 		</a>
 	</div>
 
-<div class="histats-info">
-<!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
-<!-- Histats.com  START  (aync)-->
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,5065099,4,1041,200,30,00011000']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-hs.src = ('//s10.histats.com/js15_as.js');
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();</script>
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5065099&101" alt="free counter statistics" border="0"></a></noscript>
-<!-- Histats.com  END  -->
-</div>
-
-<!-- ShareThis BEGIN -->
-<script type="text/javascript"
-  src="https://platform-api.sharethis.com/js/sharethis.js#property=6aff304a4f0675cfbe033e69&product=sop"
-  async="async"></script>
-<!-- ShareThis END -->
-
+	<div class="histats-info">
+		<div id="histats_counter"></div>
+		<noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?5065099&101" alt="free counter statistics" border="0"></a></noscript>
+	</div>
 </footer>
+
+<script is:inline>
+	function runWhenIdle(callback) {
+		if ('requestIdleCallback' in window) {
+			window.requestIdleCallback(callback, { timeout: 5000 });
+		} else {
+			window.setTimeout(callback, 2500);
+		}
+	}
+
+	window.addEventListener('load', function () {
+		runWhenIdle(function () {
+			var _Hasync = window._Hasync = window._Hasync || [];
+			_Hasync.push(['Histats.start', '1,5065099,4,1041,200,30,00011000']);
+			_Hasync.push(['Histats.fasi', '1']);
+			_Hasync.push(['Histats.track_hits', '']);
+
+			var histatsScript = document.createElement('script');
+			histatsScript.type = 'text/javascript';
+			histatsScript.async = true;
+			histatsScript.src = 'https://s10.histats.com/js15_as.js';
+			(document.head || document.body).appendChild(histatsScript);
+		});
+
+		if (document.querySelector('.sharethis-inline-share-buttons')) {
+			runWhenIdle(function () {
+				if (document.querySelector('script[src*="platform-api.sharethis.com/js/sharethis.js"]')) return;
+
+				var shareThisScript = document.createElement('script');
+				shareThisScript.async = true;
+				shareThisScript.src = 'https://platform-api.sharethis.com/js/sharethis.js#property=6aff304a4f0675cfbe033e69&product=sop';
+				(document.head || document.body).appendChild(shareThisScript);
+			});
+		}
+	}, { once: true });
+</script>
+
 <style>
 	footer {
 		padding: 30px;
@@ -52,7 +71,7 @@ hs.src = ('//s10.histats.com/js15_as.js');
 		align-items: center;
 		gap: 1em;
 		margin-top: 1em;
-        margin-bottom: 1.5em;
+		margin-bottom: 1.5em;
 	}
 	.social-links a {
 		display: flex;
