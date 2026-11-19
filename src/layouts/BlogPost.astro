@@ -10,9 +10,16 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="id-ID">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead
+			title={title}
+			description={description}
+			image={heroImage || '/blog-placeholder-2.jpg'}
+			type="article"
+			publishedTime={pubDate}
+			modifiedTime={updatedDate}
+		/>
 		<style>
 			main {
 				width: calc(100% - 2em);
