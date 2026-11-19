@@ -52,13 +52,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				font-style: italic;
 			}
 
-			.article-info2 {
-				margin-top: 2rem 0 1.5rem;
-				padding-top: 1rem;
-				border-top: 1px solid rgb(var(--gray-light));
-			}
 			.article-info {
-				margin: 1.5rem 0 2rem;
+				margin: 2em 0 2rem;
 				padding: 1.25rem;
 				border: 1px solid #d9e4df;
 				border-left: 4px solid #159957;
@@ -127,7 +122,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					</div>
 					<slot />
 
-					<aside class="article-info article-info2" aria-labelledby="article-info-title">
+					<aside class="article-info" aria-labelledby="article-info-title">
 						<h2 id="article-info-title">Informasi Penting</h2>
 						<p>Stok burung tidak selalu ready setiap saat. Harap perhatikan tanggal postingan untuk estimasi ketersediaan.</p>
 						<p>Untuk memastikan stok real time, harga terkini maupun harga grosir, silakan langsung hubungi admin via WhatsApp <a href="https://wa.me/6287723457380" target="_blank" rel="noopener noreferrer">0877-2345-7380</a>.</p>
