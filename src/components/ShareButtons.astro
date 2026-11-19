@@ -1,0 +1,24 @@
+<div class="sharethis-inline-share-buttons sharethis-info"></div>
+
+<script is:inline>
+	function runShareThisWhenIdle(callback) {
+		if ('requestIdleCallback' in window) {
+			window.requestIdleCallback(callback, { timeout: 5000 });
+		} else {
+			window.setTimeout(callback, 2500);
+		}
+	}
+
+	window.addEventListener('load', function () {
+		if (!document.querySelector('.sharethis-inline-share-buttons')) return;
+
+		runShareThisWhenIdle(function () {
+			if (document.querySelector('script[src*="platform-api.sharethis.com/js/sharethis.js"]')) return;
+
+			var shareThisScript = document.createElement('script');
+			shareThisScript.async = true;
+			shareThisScript.src = 'https://platform-api.sharethis.com/js/sharethis.js#property=6aff304a4f0675cfbe033e69&product=sop';
+			(document.head || document.body).appendChild(shareThisScript);
+		});
+	}, { once: true });
+</script>
