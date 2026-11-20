@@ -84,8 +84,9 @@ const description = 'Koleksi dan update Jalak Suren dari Dhika Jalak Suren Bali.
 				</a>
 			</section>
 
-			<section class="hero" aria-labelledby="hero-title">
-				<img class="hero-image" src="/IMG-20261120-WA0029.jpg" alt="Gambar sementara untuk koleksi Dhika Jalak Suren Bali" fetchpriority="high" />
+			<section class="hero hero 2129" aria-labelledby="hero-title">
+				<img class="hero-image hero-image21" src="/IMG-20261120-WA0021.jpg" alt="Gambar sementara untuk koleksi Dhika Jalak Suren Bali" fetchpriority="high" />
+                <img class="hero-image hero-image29" src="/IMG-20261120-WA0029.jpg" alt="Gambar sementara untuk koleksi Dhika Jalak Suren Bali" fetchpriority="high" />
 			</section>
 
 			<section class="contact section" aria-labelledby="contact-title">
@@ -122,6 +123,10 @@ const description = 'Koleksi dan update Jalak Suren dari Dhika Jalak Suren Bali.
 		isolation: isolate;
 	}
 
+	.hero2129 {
+		margin-top: 1em
+	}
+
 	.hero::after {
 		position: absolute;
 		z-index: -1;
@@ -139,6 +144,8 @@ const description = 'Koleksi dan update Jalak Suren dari Dhika Jalak Suren Bali.
 		object-fit: cover;
 		object-position: center 45%;
 	}
+
+    .hero-image21, .hero-image20 { z-index: 0 }
 
 	.hero-content {
 		max-width: 650px;
@@ -343,6 +350,8 @@ const description = 'Koleksi dan update Jalak Suren dari Dhika Jalak Suren Bali.
 
 	.whatsapp-button { flex: 0 0 auto; }
 
+   @media (min-width: 720px) { .hero-image29 { display: none; } }
+
 	@media (max-width: 720px) {
 		main { width: min(100% - 1.25rem, 1100px); padding: 1rem 0 2.5rem; }
 		.hero { min-height: 410px; border-radius: 14px; }
@@ -362,6 +371,7 @@ const description = 'Koleksi dan update Jalak Suren dari Dhika Jalak Suren Bali.
 		.quick-links { grid-template-columns: 1fr; }
 		.contact { align-items: stretch; flex-direction: column; gap: 1.2rem; padding: 1.4rem; }
 		.whatsapp-button { align-self: flex-start; }
+         .hero-image21 { display: none; }
 	}
 
 	@media (max-width: 380px) {
