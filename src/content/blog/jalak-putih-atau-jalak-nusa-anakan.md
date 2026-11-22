@@ -1,7 +1,7 @@
 ---
 title: "Jalak Putih Atau Jalak Nusa Anakan"
 description: "Jalak Putih Atau Jalak Nusa Anakan"
-pubDate: "Nov 21 2026"
+pubDate: "2026-11-21T02:38:28+08:00"
 heroImage: "/IMG-20261120-WA0028.jpg"
 ---
 
