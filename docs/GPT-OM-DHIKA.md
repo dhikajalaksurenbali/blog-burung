@@ -25,6 +25,15 @@ Alur yang diinginkan:
 
 **Penting:** pertahankan judul dan isi tulisan persis seperti yang diberikan pemilik. Jangan meringkas, menulis ulang, memperbaiki gaya, atau mengubah maksud tanpa diminta. Jangan mengarang URL gambar atau menyatakan artikel sudah terbit sebelum commit dan deployment terverifikasi.
 
+### Aturan tanggal dan urutan artikel
+
+- Setiap artikel baru wajib memakai waktu publikasi lengkap dalam format ISO 8601 dengan zona waktu Bali/WITA (UTC+08:00), sampai detik. Contoh: `pubDate: "2026-11-22T20:15:35+08:00"`.
+- Saat membuat artikel, gunakan tanggal dan waktu lokal Bali saat artikel benar-benar disiapkan untuk diposting; jangan mengarang atau memakai waktu UTC tanpa offset.
+- Urutan di halaman depan dan halaman daftar artikel memakai nilai waktu lengkap `pubDate`, sehingga jika beberapa artikel memiliki tanggal yang sama, jam, menit, dan detik menentukan urutannya. Artikel terbaru tampil paling atas.
+- Format tanggal yang terlihat oleh pengunjung tetap hanya tanggal, bulan, dan tahun. Jangan tampilkan jam, menit, detik, atau offset zona waktu di kartu, daftar, maupun halaman artikel.
+- Artikel lama yang hanya memakai tanggal (misalnya `pubDate: "Nov 21 2026"`) tetap valid dan tidak perlu diubah.
+
+
 ## 3. Worker upload gambar
 
 Worker khusus upload gambar telah dibuat di akun Cloudflare milik Dhika.
