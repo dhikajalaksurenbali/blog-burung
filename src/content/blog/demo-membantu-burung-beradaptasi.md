@@ -1,7 +1,7 @@
 ---
 title: "DEMO: Membantu Burung Beradaptasi dengan Lingkungan Baru"
 description: "Contoh tips memberi waktu bagi burung untuk mengenali kandang dan suasana baru dengan tenang."
-pubDate: "Nov 22 2026"
+pubDate: "2026-11-22T21:40:52+08:00"
 heroImage: "/images/2026/11/22/bc28033f-1ab6-481d-bf28-5b36a68020d6.webp"
 ---
 
