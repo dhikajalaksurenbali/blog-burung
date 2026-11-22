@@ -1,7 +1,7 @@
 ---
 title: "DEMO: Mengenal Pakan Burung Jalak dan Pola Pemberiannya"
 description: "Contoh artikel tentang pentingnya pakan bervariasi, air bersih, dan pemantauan konsumsi burung."
-pubDate: "Nov 22 2026"
+pubDate: "2026-11-22T21:40:48+08:00"
 heroImage: "/images/2026/11/22/695755ad-9be5-4dc3-a5d8-c3504c39882b.webp"
 ---
 
