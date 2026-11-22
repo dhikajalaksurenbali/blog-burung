@@ -1,7 +1,7 @@
 ---
 title: "DEMO: Cara Menjaga Kebersihan Kandang Burung"
 description: "Contoh panduan sederhana membersihkan kandang, wadah pakan, dan tempat minum secara rutin."
-pubDate: "Nov 22 2026"
+pubDate: "2026-11-22T21:40:50+08:00"
 heroImage: "/images/2026/11/22/c1d84539-3926-4e52-89c9-98013ab03111.webp"
 ---
 
