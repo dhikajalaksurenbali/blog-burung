@@ -1,7 +1,7 @@
 ---
 title: "DEMO: Rutinitas Harian untuk Perawatan Burung"
 description: "Contoh daftar pemeriksaan harian agar kebutuhan dasar burung tidak terlewat."
-pubDate: "Nov 22 2026"
+pubDate: "2026-11-22T21:40:54+08:00"
 heroImage: "/images/2026/11/22/bac9f96d-1e06-43ee-b7b6-69694c780193.webp"
 ---
 
