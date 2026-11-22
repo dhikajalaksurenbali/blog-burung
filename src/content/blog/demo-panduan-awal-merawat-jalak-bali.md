@@ -1,7 +1,7 @@
 ---
 title: "DEMO: Panduan Awal Merawat Burung Jalak Bali"
 description: "Contoh panduan dasar menyiapkan lingkungan nyaman dan rutinitas perawatan burung jalak Bali."
-pubDate: "Nov 22 2026"
+pubDate: "2026-11-22T21:40:43+08:00"
 heroImage: "/images/2026/11/22/3284abc9-51ed-4dd0-b0ce-8d1a01312725.webp"
 ---
 
