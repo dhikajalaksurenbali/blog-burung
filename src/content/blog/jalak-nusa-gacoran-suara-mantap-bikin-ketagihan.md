@@ -2,7 +2,7 @@
 title: "Jalak Nusa Gacoran – Suara Mantap, Bikin Ketagihan"
 description: "Jalak Nusa gacoran dengan suara lantang dan menarik, pilihan untuk menambah koleksi pecinta burung."
 pubDate: 2026-11-24
-heroImage: "https://raw.githubusercontent.com/dhikajalaksurenbali/blog-burung/main/public/images/2026/11/24/fb4e1d0a-1fbd-4bc2-89a2-6658a838f819.webp"
+heroImage: "/images/2026/11/24/fb4e1d0a-1fbd-4bc2-89a2-6658a838f819.webp"
 ---
 
 🔥 **JALAK NUSA GACORAN – SUARA MANTAP, BIKIN KETAGIHAN** 🔥
