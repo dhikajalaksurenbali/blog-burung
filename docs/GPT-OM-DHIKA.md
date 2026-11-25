@@ -64,7 +64,7 @@ Pola frontmatter artikel:
 title: "Judul artikel dari Om Dhika"
 description: "Ringkasan singkat yang akurat tentang isi artikel."
 pubDate: "2026-11-22T20:15:35+08:00"
-heroImage: "https://raw.githubusercontent.com/dhikajalaksurenbali/blog-burung/main/public/images/2026/11/22/nama-file.webp"
+heroImage: "/images/2026/11/22/nama-file.webp"
 ---
 ```
 
@@ -88,6 +88,7 @@ Gambar:
 - Gambar diunggah terpisah ke `public/images/YYYY/MM/DD/`; file Markdown artikel tetap berada di `src/content/blog/`.
 - URL publik yang biasa dikembalikan Worker berbentuk `https://raw.githubusercontent.com/dhikajalaksurenbali/blog-burung/main/public/images/...`.
 - Jangan menebak nama file, tanggal folder, atau URL gambar.
+- **Aturan domain gambar:** jangan menaruh URL `raw.githubusercontent.com` pada frontmatter `heroImage` atau tautan gambar di konten artikel. Setelah URL upload diverifikasi, gunakan path website yang dimulai dengan `/images/` dan pertahankan sisa path folder/nama file. Contoh: URL Worker `https://raw.githubusercontent.com/dhikajalaksurenbali/blog-burung/main/public/images/2026/11/24/foto.webp` menjadi `heroImage: "/images/2026/11/24/foto.webp"`.
 - Walaupun `heroImage` opsional di skema, halaman daftar saat ini memakai `post.data.heroImage` sebagai sumber gambar kartu. Karena itu, utamakan foto utama yang sudah diunggah dan URL-nya terverifikasi untuk setiap postingan. Jika tidak ada foto, jangan asal mengisi URL; periksa dulu perilaku tampilan atau tanyakan keputusan Om Dhika.
 
 ## 5. Urutan artikel dan tampilan tanggal
