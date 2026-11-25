@@ -2,7 +2,7 @@
 title: "Sikat Jalak Suren Albino"
 description: "Jalak Suren Albino istimewa dengan warna putih eksotis, penampilan elegan, dan kondisi sehat terawat."
 pubDate: 2026-11-23
-heroImage: "https://raw.githubusercontent.com/dhikajalaksurenbali/blog-burung/main/public/images/2026/11/22/fa15cccf-d2ca-4517-9464-95e4efe63864.webp"
+heroImage: "/images/2026/11/22/fa15cccf-d2ca-4517-9464-95e4efe63864.webp"
 ---
 
 😍 Tampil beda, warna istimewa
