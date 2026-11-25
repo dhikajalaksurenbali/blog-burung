@@ -34,6 +34,7 @@ const today = new Date();
 			if (started) return;
 			started = true;
 			window.clearTimeout(timer);
+			window.removeEventListener('scroll', onScroll);
 
 			var _Hasync = window._Hasync = window._Hasync || [];
 			_Hasync.push(['Histats.start', '1,5065099,4,1041,200,30,00011000']);
@@ -47,9 +48,16 @@ const today = new Date();
 			(document.head || document.body).appendChild(histatsScript);
 		}
 
+		function onScroll() {
+			if (window.scrollY > 0) loadHistats();
+		}
+
 		function startDelay() {
+			if (started) return;
 			timer = window.setTimeout(loadHistats, 8000);
 		}
+
+		window.addEventListener('scroll', onScroll, { passive: true });
 
 		if (document.readyState === 'complete') {
 			startDelay();
