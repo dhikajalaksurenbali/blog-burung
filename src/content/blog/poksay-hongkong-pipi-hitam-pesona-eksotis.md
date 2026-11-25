@@ -2,7 +2,7 @@
 title: "Poksay Hongkong Pipi Hitam Pesona Eksotis Suara Merdu Bikin Jatuh Hati!"
 description: "Poksay Hongkong Pipi Hitam dengan penampilan khas dan daya tarik eksotis, pilihan menarik untuk koleksi pecinta burung."
 pubDate: 2026-11-24
-heroImage: "https://raw.githubusercontent.com/dhikajalaksurenbali/blog-burung/main/public/images/2026/11/24/9fbac2e9-b367-4f7d-bc94-24bed1c4e128.webp"
+heroImage: "/images/2026/11/24/9fbac2e9-b367-4f7d-bc94-24bed1c4e128.webp"
 ---
 
 ✨ **POKSAY HONGKONG PIPI HITAM PESONA EKSOTIS
