@@ -168,6 +168,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					timer = window.setTimeout(loadShareThis, 8000);
 				}
 
+				// Muat lebih awal jika pengunjung mulai menggulir halaman.
+				window.addEventListener('scroll', loadShareThis, { once: true, passive: true });
+
 				if (document.readyState === 'complete') {
 					startDelay();
 				} else {
