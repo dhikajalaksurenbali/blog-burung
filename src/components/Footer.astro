@@ -34,9 +34,6 @@ const today = new Date();
 			if (started) return;
 			started = true;
 			window.clearTimeout(timer);
-			['scroll', 'pointerdown', 'touchstart', 'keydown'].forEach(function (eventName) {
-				window.removeEventListener(eventName, loadHistats);
-			});
 
 			var _Hasync = window._Hasync = window._Hasync || [];
 			_Hasync.push(['Histats.start', '1,5065099,4,1041,200,30,00011000']);
@@ -52,9 +49,6 @@ const today = new Date();
 
 		function startDelay() {
 			timer = window.setTimeout(loadHistats, 8000);
-			['scroll', 'pointerdown', 'touchstart', 'keydown'].forEach(function (eventName) {
-				window.addEventListener(eventName, loadHistats, { once: true, passive: true });
-			});
 		}
 
 		if (document.readyState === 'complete') {
