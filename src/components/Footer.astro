@@ -26,16 +26,18 @@ const today = new Date();
 </footer>
 
 <script is:inline>
-	function runWhenIdle(callback) {
-		if ('requestIdleCallback' in window) {
-			window.requestIdleCallback(callback, { timeout: 5000 });
-		} else {
-			window.setTimeout(callback, 2500);
-		}
-	}
+	function scheduleHistats() {
+		var started = false;
+		var timer;
 
-	window.addEventListener('load', function () {
-		runWhenIdle(function () {
+		function loadHistats() {
+			if (started) return;
+			started = true;
+			window.clearTimeout(timer);
+			['scroll', 'pointerdown', 'touchstart', 'keydown'].forEach(function (eventName) {
+				window.removeEventListener(eventName, loadHistats);
+			});
+
 			var _Hasync = window._Hasync = window._Hasync || [];
 			_Hasync.push(['Histats.start', '1,5065099,4,1041,200,30,00011000']);
 			_Hasync.push(['Histats.fasi', '1']);
@@ -46,8 +48,23 @@ const today = new Date();
 			histatsScript.async = true;
 			histatsScript.src = 'https://s10.histats.com/js15_as.js';
 			(document.head || document.body).appendChild(histatsScript);
-		});
-	}, { once: true });
+		}
+
+		function startDelay() {
+			timer = window.setTimeout(loadHistats, 8000);
+			['scroll', 'pointerdown', 'touchstart', 'keydown'].forEach(function (eventName) {
+				window.addEventListener(eventName, loadHistats, { once: true, passive: true });
+			});
+		}
+
+		if (document.readyState === 'complete') {
+			startDelay();
+		} else {
+			window.addEventListener('load', startDelay, { once: true });
+		}
+	}
+
+	scheduleHistats();
 </script>
 
 <style>
