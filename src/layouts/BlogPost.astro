@@ -156,9 +156,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					if (started || document.querySelector('script[data-sharethis-loader]')) return;
 					started = true;
 					window.clearTimeout(timer);
-					['scroll', 'pointerdown', 'touchstart', 'keydown'].forEach(function (eventName) {
-						window.removeEventListener(eventName, loadShareThis);
-					});
 
 					var script = document.createElement('script');
 					script.async = true;
@@ -169,9 +166,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 				function startDelay() {
 					timer = window.setTimeout(loadShareThis, 8000);
-					['scroll', 'pointerdown', 'touchstart', 'keydown'].forEach(function (eventName) {
-						window.addEventListener(eventName, loadShareThis, { once: true, passive: true });
-					});
 				}
 
 				if (document.readyState === 'complete') {
