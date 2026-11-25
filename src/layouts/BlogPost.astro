@@ -148,22 +148,40 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		</main>
 		<Footer />
 		<script is:inline>
-			function loadShareThisWhenIdle() {
-				var load = function () {
-					if (document.querySelector('script[data-sharethis-loader]')) return;
+			function scheduleShareThis() {
+				var started = false;
+				var timer;
+
+				function loadShareThis() {
+					if (started || document.querySelector('script[data-sharethis-loader]')) return;
+					started = true;
+					window.clearTimeout(timer);
+					['scroll', 'pointerdown', 'touchstart', 'keydown'].forEach(function (eventName) {
+						window.removeEventListener(eventName, loadShareThis);
+					});
+
 					var script = document.createElement('script');
 					script.async = true;
 					script.src = 'https://platform-api.sharethis.com/js/sharethis.js#property=6aff304a4f0675cfbe033e69&product=sop';
 					script.setAttribute('data-sharethis-loader', 'true');
 					(document.head || document.body).appendChild(script);
-				};
-				if ('requestIdleCallback' in window) {
-					window.requestIdleCallback(load, { timeout: 5000 });
+				}
+
+				function startDelay() {
+					timer = window.setTimeout(loadShareThis, 8000);
+					['scroll', 'pointerdown', 'touchstart', 'keydown'].forEach(function (eventName) {
+						window.addEventListener(eventName, loadShareThis, { once: true, passive: true });
+					});
+				}
+
+				if (document.readyState === 'complete') {
+					startDelay();
 				} else {
-					window.setTimeout(load, 2500);
+					window.addEventListener('load', startDelay, { once: true });
 				}
 			}
-			window.addEventListener('load', loadShareThisWhenIdle, { once: true });
+
+			scheduleShareThis();
 		</script>
 	</body>
 </html>
